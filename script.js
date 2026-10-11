@@ -4,7 +4,7 @@ let victoriasMaquina = 0;
 while (victoriasUsuario < 3 && victoriasMaquina < 3) {
 
   let jugada = prompt("Elige: Piedra, Papel o Tijera");
-  jugada = jugada.toLowerCase();
+  jugada = jugada ? jugada.toLowerCase() : "";
 
   while (jugada !== "piedra" && jugada !== "papel" && jugada !== "tijera") {
   alert("¡Opción inválida! Debes elegir Piedra, Papel o Tijera.");
