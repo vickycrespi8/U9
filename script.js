@@ -26,19 +26,25 @@ while (victoriasUsuario < 3 && victoriasMaquina < 3) {
   console.log(`La máquina eligió: ${jugadaMaquina}`);
 
   if (jugada === jugadaMaquina) {
-  console.log("Empate");
-  alert(`Jugada de la máquina: ${jugadaMaquina}\n\n¡Empate en esta ronda!\nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
-} else if (
-  (jugadaMaquina === "piedra" && jugada === "tijera") ||
-  (jugadaMaquina === "papel" && jugada === "piedra") ||
-  (jugadaMaquina === "tijera" && jugada === "papel")
-) {
-  victoriasMaquina++;
-  alert(`Jugada de la máquina: ${jugadaMaquina}\n\nLa máquina ganó esta ronda \nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
-} else {
-  victoriasUsuario++;
-  alert(`Jugada de la máquina: ${jugadaMaquina}\n\n¡Ganaste esta ronda! \nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
-}
+    console.log("Empate");
+    alert(`Jugada de la máquina: ${jugadaMaquina}\n\n¡Empate en esta ronda!\nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
+  } else if (
+    (jugadaMaquina === "piedra" && jugada === "tijera") ||
+    (jugadaMaquina === "papel" && jugada === "piedra") ||
+    (jugadaMaquina === "tijera" && jugada === "papel")
+  ) {
+    victoriasMaquina++;
+    alert(`Jugada de la máquina: ${jugadaMaquina}\n\nLa máquina ganó esta ronda \nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
+  } else if (
+    (jugada === "piedra" && jugadaMaquina === "tijera") ||
+    (jugada === "papel" && jugadaMaquina === "piedra") ||
+    (jugada === "tijera" && jugadaMaquina === "papel")
+  ) {
+    victoriasUsuario++;
+    alert(`Jugada de la máquina: ${jugadaMaquina}\n\n¡Ganaste esta ronda! \nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
+  } else {
+    alert("Ocurrió un error con la jugada. Inténtalo de nuevo.");
+  }
 }
 
 let ganador = victoriasUsuario === 3 ? "¡Ganaste la partida 😊!" : "La máquina ganó la partida 😭";
