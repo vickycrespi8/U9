@@ -42,9 +42,7 @@ while (victoriasUsuario < 3 && victoriasMaquina < 3) {
   ) {
     victoriasUsuario++;
     alert(`Jugada de la máquina: ${jugadaMaquina}\n\n¡Ganaste esta ronda! \nTú ${victoriasUsuario} - ${victoriasMaquina} Máquina`);
-  } else {
-    alert("Ocurrió un error con la jugada. Inténtalo de nuevo.");
-  }
+  } 
 }
 
 let ganador = victoriasUsuario === 3 ? "¡Ganaste la partida 😊!" : "La máquina ganó la partida 😭";
