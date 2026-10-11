@@ -6,6 +6,12 @@ while (victoriasUsuario < 3 && victoriasMaquina < 3) {
   let jugada = prompt("Elige: Piedra, Papel o Tijera");
   jugada = jugada.toLowerCase();
 
+  while (jugada !== "piedra" && jugada !== "papel" && jugada !== "tijera") {
+  alert("¡Opción inválida! Debes elegir Piedra, Papel o Tijera.");
+  jugada = prompt("Elige: Piedra, Papel o Tijera");
+  jugada = jugada ? jugada.toLowerCase() : "";
+}
+
   let azar = Math.random();
   let jugadaMaquina = "";
 
